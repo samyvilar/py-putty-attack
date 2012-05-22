@@ -1,0 +1,6 @@
+.hg*
+*.idea
+*.so
+*.o
+*.pyc
+.DS_Store
