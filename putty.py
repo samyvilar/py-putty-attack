@@ -19,7 +19,7 @@ def check_putty_phrase(kwargs):
     phrase = kwargs['phrase']
     if not os.path.isfile(putty_file):
         raise ValueError('% cant be found or isnt a file!' % putty_file)
-    return _libputty.check_phrase(putty_file, phrase) if True else False
+    return True if _libputty.check_phrase(putty_file, phrase) else False
 
 def test():
     phrases = [{'putty_file':'hackme.ppk', 'phrase':value} for value in open('dict.txt', 'r').read().split('\r\n')]
